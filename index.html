@@ -10,8 +10,12 @@
   <style>
     /* 1. 页面背景（底片）：柔和浅灰，避免纯白刺眼 */
     body {
-      background-color: #f8f9fa; /* 背景色，可改：#f5f5f5（更浅）、#e8f4f8（浅蓝） */
-      background-image: none; /* 若想要图片背景，改成：url(images/背景图.png) */
+      background-color: #f8f9fa; /* 兜底背景色，图片加载失败时显示 */
+      background-image: url(images/背景图片1.jpeg); /* 改这里的图片名即可 */
+      background-repeat: repeat; /* 图片平铺铺满页面，不想平铺可改成 no-repeat */
+      background-size: auto; /* 保持图片原尺寸，想拉伸铺满可改成 cover */
+      opacity: unset; /* 清空默认值 */
+      background-color: rgba(248, 249, 250, 0.9); /* 用背景色叠加实现透明度，避免文字变透明 */
     }
 
     /* 2. 主内容区样式：白色卡片+阴影，更立体 */
